@@ -1,5 +1,5 @@
 from lib2to3.pytree import Base
-from src.shared.helpers.errors.base_error import BaseError
+from src.shared.helpers.errors.base_errors import BaseError
 
 class NoItemsFound(BaseError):
     def __init__(self, message: str):
