@@ -47,7 +47,7 @@ class Test_CreateOrderPresenter:
                 "time": "12/Mar/2020:19:03:58 +0000",
                 "timeEpoch": 1583348638390
             },
-            "body": '{"table":"1", "flavor":"CHICKEN"}',
+            "body": '{"table":"1", "flavor":"BACON", "price:"BACON"}',
             "pathParameters": None,
             "isBase64Encoded": None,
             "stageVariables": None
@@ -55,8 +55,9 @@ class Test_CreateOrderPresenter:
         
         expected = {
             "table": 1,
-            "hamburguer":{
-                "flavor": "CHICKEN"
+            "pizza":{
+                "flavor": "BACON",
+                "price":"BACON"
             },
             
             "message": "the order has been created"
@@ -170,7 +171,7 @@ class Test_CreateOrderPresenter:
                 "time": "12/Mar/2020:19:03:58 +0000",
                 "timeEpoch": 1583348638390
             },
-            "body": '{"table":"string", "flavor":"BEEF"}',
+            "body": '{"table":"string", "flavor":"BACON"}',
             "pathParameters": None,
             "isBase64Encoded": None,
             "stageVariables": None

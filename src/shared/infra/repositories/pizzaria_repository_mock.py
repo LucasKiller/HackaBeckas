@@ -38,4 +38,3 @@ class PizzariaRepositoryMock(IPizzariaRepository):
 
         return order
 
-#Problemas: o list só "funciona" com a importação de List

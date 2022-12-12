@@ -8,25 +8,19 @@ class Test_CreateOrderController():
     def test_create_order_controller(self):
         repo = PizzariaRepositoryMock()
         usecase = CreateOrderUsecase(repo=repo)
-        # controller = CreateOrderController(usecase=usecase)
+        controller = CreateOrderController(usecase=usecase)
         # request = HttpRequest(
         #     body = {
         #         "flavor": "BACON",
-        #         "price": "BACON",
+        #         "price": 10,
         #         "table": "1"   
         #     }
         # )
 
-    response = CreateOrderController(request=HttpRequest(
-            body = {
-                "flavor": "BACON",
-                "price": "BACON",
-                "table": "1"   
-            }
-        ))
+        response = controller(request=HttpRequest(body={"table":"2","flavor":"BACON","price":"BACON"}))
 
-    assert response.status_code == 201
-    assert response.body["pizza"]["flavor"] == "BACON"
-    assert response.body["pizza"]["price"] == "BACON"
-    assert response.body["table"] == "1"
-    assert response.body["message"] == "the order has been created"
+        assert response.status_code == 201
+        assert response.body["pizza"]["flavor"] == "BACON"
+        assert response.body["pizza"]["price"] == "BACON"
+        assert response.body["table"] == 2
+        assert response.body["message"] == "the order has been created"

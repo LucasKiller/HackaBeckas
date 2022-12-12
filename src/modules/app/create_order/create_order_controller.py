@@ -1,5 +1,5 @@
-from create_order.create_order_usecase import CreateOrderUsecase
-from create_order.create_order_viewmodel import CreateOrderViewModel
+from .create_order_usecase import CreateOrderUsecase
+from .create_order_viewmodel import CreateOrderViewModel
 from src.shared.helpers.http.http_models import BadRequest, Created, HttpRequest, HttpResponse, InternalServerError
 from src.shared.helpers.errors.domain_errors import EntityError
 from src.shared.helpers.errors.controller_errors import MissingParameters
@@ -26,16 +26,16 @@ class CreateOrderController:
             if not request.body["table"].isdecimal():
                 raise EntityError("table")
             
-            if not request.body["price"].isdecimal():
-                raise EntityError("price")
+            # if not request.body["price"].isdecimal():
+            #     raise EntityError("price")
             
             flavors = list()
             for item in FLAVOR:
-                item.append(item.value)
+                flavors.append(item.value)
 
             prices = list()
             for item in PRICE:
-                item.append(item.value)
+                prices.append(item.value)
 
             if request.body["flavor"] not in flavors:
                 raise EntityError("flavor")

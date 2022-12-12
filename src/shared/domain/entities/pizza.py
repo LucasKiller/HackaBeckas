@@ -1,8 +1,8 @@
 import abc
 
-from shared.domain.enums.flavor_enum import FLAVOR
-from shared.domain.enums.price_enum import PRICE
-from shared.helpers.errors.domain_errors import EntityError
+from src.shared.domain.enums.flavor_enum import FLAVOR
+from src.shared.domain.enums.price_enum import PRICE
+from src.shared.helpers.errors.domain_errors import EntityError
 
 class Pizza(abc.ABC):
     flavor : FLAVOR

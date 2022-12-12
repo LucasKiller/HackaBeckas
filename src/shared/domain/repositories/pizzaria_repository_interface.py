@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from shared.domain.enums.flavor_enum import FLAVOR
-from shared.domain.enums.price_enum import PRICE
+from src.shared.domain.enums.flavor_enum import FLAVOR
+from src.shared.domain.enums.price_enum import PRICE
 from src.shared.domain.entities.order import Order
 
 

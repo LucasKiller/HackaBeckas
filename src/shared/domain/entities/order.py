@@ -1,5 +1,5 @@
 import abc
-from shared.helpers.errors.domain_errors import EntityError
+from src.shared.helpers.errors.domain_errors import EntityError
 
 from src.shared.domain.entities.pizza import Pizza
 

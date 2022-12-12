@@ -1,6 +1,6 @@
 from src.shared.helpers.http.http_lambda_requests import LambdaHttpResponse, LambdaHttpRequest
-from src.modules.create_order.create_order_controller import CreateOrderController
-from src.modules.create_order.create_order_usecase import CreateOrderUsecase
+from .create_order_controller import CreateOrderController
+from .create_order_usecase import CreateOrderUsecase
 from src.shared.infra.repositories.pizzaria_repository_mock import PizzariaRepositoryMock
 
 def lambda_handler(event, context):
